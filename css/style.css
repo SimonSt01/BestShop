@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+}
+:root {
+  --primary-color: #08a6e4;
+}
+.container {
+  width: 1352px;
+  height: 100%;
+  margin: 0 auto;
+}
+.manu-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-bar__logo {
+  color: var(--primary-color);
+}
