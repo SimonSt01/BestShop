@@ -1,24 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+/* Reset CSS */
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-
-body {
+html {
+  font-size: 10px;
 }
-:root {
-  --primary-color: #08a6e4;
+body {
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--unactive-color);
 }
 .container {
   width: 1352px;
   height: 100%;
   margin: 0 auto;
 }
-.manu-bar .container {
+
+/* Variables */
+:root {
+  --primary-color: #08a6e4;
+  --large-font-size: 3.6rem;
+  --unactive-color: #a5a5a5;
+  --color-primary-shadow: rgba(7, 172, 230, 0.16);
+  --color-redish: #fb3b64;
+  --color-green: #55dfb4;
+  --black-color: black;
+  --color-light-grey: #f7f7f7;
+  --color-white: #ffffff;
+}
+
+/* Header */
+.menu-bar {
+  width: 100vw;
+  height: 70px;
+  box-shadow: 0px 3px 6px #00000029;
+  position: fixed;
+}
+.menu-bar > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu-bar__logo {
+.menu-bar__logo a {
   color: var(--primary-color);
+  font-size: var(--large-font-size);
+}
+.manu-bar__nav-block {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.manu-bar_item {
+  text-transform: uppercase;
+  margin: 0 35px;
+}
+.manu-bar_item:hover a {
+  transition: 0.4s;
+  color: black;
+}
+.main-section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/Background.png);
+  background-size: cover;
+  background-position: bottom center;
 }
