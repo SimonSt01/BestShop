@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  display: grid;
+  display: flex;
   max-width: 1035px;
   width: 100%;
   height: 100%;
@@ -22,10 +22,6 @@ body {
 a,
 button {
   text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  background-color: transparent;
 }
 
 .logo a {
@@ -34,16 +30,33 @@ button {
   font-weight: 300;
 }
 
+h2 {
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  background-color: #08a6e4;
+  padding: 20px 70px;
+  color: white;
+  box-shadow: 5px 10px 14px #07ace629;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .header {
   background-color: white;
   width: 100vw;
   height: 70px;
   box-shadow: 0px 3px 6px #00000029;
-  padding: 4%;
+  padding: 2% 5%;
+  position: fixed;
 }
 .header .container {
-  grid-template-columns: 80% 20%;
-  grid-template-rows: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 .header__menu {
@@ -61,6 +74,7 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 .header__hamburger span {
   height: 3px;
@@ -72,5 +86,30 @@ button {
 
 .header__menu {
   display: none;
+}
+
+.opening {
+  width: 100%;
+  height: 100vh;
+}
+.opening__content {
+  margin-top: 50%;
+}
+.opening__slogan {
+  font-size: 2.2rem;
+}
+.opening__message {
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+.opening__img {
+  width: 220%;
+}
+.opening .container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
