@@ -1,0 +1,37 @@
+.header {
+  background-color: $page-color;
+  width: 100vw;
+  height: 70px;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 4%;
+  .container {
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__logo a {
+    font-size: 2rem;
+  }
+}
+.header__hamburger {
+  display: block;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  span {
+    height: 3px;
+    width: 100%;
+    background-color: $primary-color;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+}
+.header__menu {
+  display: none;
+}
