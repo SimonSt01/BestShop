@@ -1,0 +1,40 @@
+%bubble-shape {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 10px;
+}
+%benefit-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border: 1px solid #e8e9ed;
+  border-radius: 5px;
+  width: 100%;
+  background-color: $page-color;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+%price-card {
+  border-radius: 10px;
+  min-height: 300px;
+  margin: 35px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-family: $secondary-font;
+  font-weight: 400;
+  position: relative;
+
+  button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+}

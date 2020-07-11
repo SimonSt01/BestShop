@@ -1,0 +1,66 @@
+.pricing {
+  &__card--basic {
+    @extend %price-card;
+    border: 2px solid $secondary-color;
+    width: 90%;
+    p {
+      color: $secondary-color;
+    }
+  }
+  &__card--professional {
+    @extend %price-card;
+    box-shadow: 5px 10px 27px $disting-shadow-color;
+    border: 2px solid $primary-color;
+    width: 92%;
+    min-height: 310px;
+    p {
+      color: $primary-color;
+    }
+  }
+  &__card--premium {
+    @extend %price-card;
+    border: 2px solid $tertiary-color;
+    width: 90%;
+
+    p {
+      color: $tertiary-color;
+    }
+  }
+  &__card-type {
+    font-size: 1.25rem;
+    font-family: $primary-font;
+  }
+
+  &__price {
+    font-size: 2.875rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__price span {
+    margin-top: 7px;
+    font-family: $primary-font;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  &__content {
+    list-style-type: none;
+    text-align: left;
+  }
+  &__feature {
+    font-size: 1.4rem;
+    font-size: var(--medium-font-size);
+    margin: 1.3rem 0;
+  }
+  &__icon {
+    margin-right: 5px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,15 @@
+@mixin setDecoration($radius, $size, $bg-color, $pos-x, $pos-y) {
+  position: absolute;
+  border-radius: $radius;
+  width: $size;
+  height: $size;
+  background-color: $bg-color;
+  left: $pos-x;
+  top: $pos-y;
+}
+@mixin setPhoto($pos-x, $pos-y) {
+  position: absolute;
+  left: $pos-x;
+  top: $pos-y;
+  transform: translate(-50%, -50%);
+}
