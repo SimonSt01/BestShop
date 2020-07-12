@@ -15,7 +15,7 @@
   margin-bottom: 10px;
 }
 
-.benefits__item--primary {
+.benefits__item--tertiary, .benefits__item--secondary, .benefits__item--primary {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -26,7 +26,6 @@
   margin: 30px 0;
   display: flex;
   justify-content: space-around;
-  padding: 15px;
 }
 
 .pricing__card--premium, .pricing__card--professional, .pricing__card--basic {
@@ -229,28 +228,79 @@ section {
   justify-content: center;
   background-color: white;
   width: 100%;
+  padding: 15px;
 }
 .benefits__header {
   text-align: left;
   margin: 10px 0 30px;
+  font-size: 1.875rem;
 }
 .benefits__photo {
-  width: 100%;
+  max-width: 200px;
   position: relative;
 }
 .benefits__message {
   font-size: 0.875rem;
 }
+.benefits____underline {
+  display: none;
+}
+.benefits__graphic {
+  width: 100%;
+  max-width: 200px;
+  min-height: 200px;
+  position: relative;
+}
 
 .benefits__item--primary .benefits__decoration {
   position: absolute;
-  border-radius: 40px;
+  border-radius: 50%;
   width: 160px;
   height: 160px;
-  background-color: #fb3b64;
-  left: 72%;
-  top: 0;
+  background-color: #08a6e4;
+  left: 40%;
+  top: 70%;
   transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+.benefits__item--primary .benefits__photo {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.benefits__item--secondary .benefits__decoration {
+  position: absolute;
+  border-radius: 40px;
+  width: 100px;
+  height: 100px;
+  background-color: #fb3b64;
+  left: 77%;
+  top: 50%;
+  transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+.benefits__item--secondary .benefits__photo {
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.benefits__item--tertiary {
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+.benefits__item--tertiary .benefits__graphic {
+  background-color: #55dfb4;
+  max-width: 100%;
+  width: 100%;
+}
+.benefits__item--tertiary .benefits__photo {
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  transform: translate(-50%, -50%);
 }
 
 .pricing__card--basic {
@@ -310,5 +360,97 @@ section {
 .pricing__info {
   display: flex;
   flex-direction: column;
+}
+
+.contact .container {
+  align-items: flex-start;
+}
+.contact-info {
+  width: 50%;
+}
+.contact__header {
+  font-size: 2.5rem;
+  text-align: left;
+}
+.contact__message {
+  font-size: var(--medium-font-size);
+  margin: 20px 0 30px;
+  font-size: 1rem;
+}
+.contact__data {
+  list-style: none;
+  display: flex;
+}
+.contact__data-item {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  color: var(--unactive-color);
+  font-size: var(--medium-font-size);
+  line-height: 27px;
+}
+.contact__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.375rem;
+}
+.contact__icon {
+  margin-right: 5px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: left;
+  width: 40%;
+}
+.contact__form label {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 3.28px;
+  margin: 20px 0;
+}
+.contact__form input {
+  border: 0;
+  border-bottom: 2px solid var(--unactive-color);
+  width: 100%;
+  outline: none;
+}
+.contact__form input:focus {
+  border-color: var(--primary-color);
+}
+.contact .contact__agreement {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact__checkbox {
+  margin-right: 10px;
+}
+.contact .contact__agreement-text {
+  font-size: 1.2rem;
+  color: var(--unactive-color);
+}
+.contact .contact__btn {
+  color: var(--color-white);
+  padding: 15px 80px;
+  background-color: var(--primary-color);
+  font-weight: 600;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  align-self: flex-end;
+  margin-top: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.contact .contact__btn:hover {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=main.css.map */

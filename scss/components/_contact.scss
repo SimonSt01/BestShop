@@ -1,0 +1,95 @@
+.contact {
+  .container {
+    align-items: flex-start;
+  }
+  &-info {
+    width: 50%;
+  }
+  &__header {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  &__message {
+    font-size: var(--medium-font-size);
+    margin: 20px 0 30px;
+    font-size: 1rem;
+  }
+  &__data {
+    list-style: none;
+    display: flex;
+  }
+  &__data-item {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: var(--unactive-color);
+    font-size: var(--medium-font-size);
+    line-height: 27px;
+  }
+
+  &__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.375rem;
+  }
+  &__icon {
+    margin-right: 5px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    width: 40%;
+    label {
+      color: var(--primary-color);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 3.28px;
+      margin: 20px 0;
+    }
+    input {
+      border: 0;
+      border-bottom: 2px solid var(--unactive-color);
+      width: 100%;
+      outline: none;
+    }
+    input:focus {
+      border-color: var(--primary-color);
+    }
+  }
+
+  .contact__agreement {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .contact__checkbox {
+    margin-right: 10px;
+  }
+  .contact__agreement-text {
+    font-size: 1.2rem;
+    color: var(--unactive-color);
+  }
+  .contact__btn {
+    color: var(--color-white);
+    padding: 15px 80px;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    align-self: flex-end;
+    margin-top: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .contact__btn:hover {
+    opacity: 0.7;
+  }
+}

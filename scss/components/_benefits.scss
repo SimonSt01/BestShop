@@ -10,44 +10,64 @@
     justify-content: center;
     background-color: $page-color;
     width: 100%;
+    padding: 15px;
   }
   &__header {
     text-align: left;
     margin: 10px 0 30px;
+    font-size: 1.875rem;
   }
   &__photo {
-    width: 100%;
+    max-width: 200px;
     position: relative;
   }
   &__message {
     font-size: 0.875rem;
   }
+  &____underline {
+    display: none;
+  }
+  &__graphic {
+    width: 100%;
+    max-width: 200px;
+    min-height: 200px;
+    position: relative;
+  }
 }
 
 .benefits__item--primary {
   @extend %benefit-box;
+
   .benefits__decoration {
-    @include setDecoration($primary-radius, 160px, #fb3b64, 72%, 0);
+    @include setDecoration(50%, 160px, $primary-color, 40%, 70%);
     transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
   }
+  .benefits__photo {
+    @include setPhoto(60%, 60%);
+  }
 }
-// .benefits__item--secondary {
-//   @extend %benefit-box;
-//   .benefits__decoration {
-//     @include setDecoration();
-//   }
-//   .benefits__photo {
-//     @include setPhoto();
-//   }
-// }
-// .benefits__item--tertiary {
-//   @extend %benefit-box;
-//   flex-direction: column;
-//   .benefits__decoration {
-//     @include setDecoration();
-//     background-color: $tertiary-color;
-//   }
-//   .benefits__photo {
-//     @include setPhoto();
-//   }
-// }
+.benefits__item--secondary {
+  @extend %benefit-box;
+
+  .benefits__decoration {
+    @include setDecoration($primary-radius, 100px, $secondary-color, 77%, 50%);
+    transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  }
+  .benefits__photo {
+    @include setPhoto(45%, 60%);
+  }
+}
+.benefits__item--tertiary {
+  @extend %benefit-box;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  .benefits__graphic {
+    background-color: $tertiary-color;
+    max-width: 100%;
+    width: 100%;
+  }
+  .benefits__photo {
+    @include setPhoto(45%, 70%);
+  }
+}
