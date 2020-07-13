@@ -26,6 +26,9 @@
       color: $tertiary-color;
     }
   }
+  &__header {
+    font-size: 2.25rem;
+  }
   &__card-type {
     font-size: 1.25rem;
     font-family: $primary-font;
@@ -49,12 +52,14 @@
 
   &__content {
     list-style-type: none;
-    text-align: left;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
   }
   &__feature {
-    font-size: 1.4rem;
-    font-size: var(--medium-font-size);
-    margin: 1.3rem 0;
+    font-size: 0.875rem;
   }
   &__icon {
     margin-right: 5px;

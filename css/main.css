@@ -326,6 +326,9 @@ section {
 .pricing__card--premium p {
   color: #55dfb4;
 }
+.pricing__header {
+  font-size: 2.25rem;
+}
 .pricing__card-type {
   font-size: 1.25rem;
   font-family: "Raleway", sans-serif;
@@ -347,12 +350,14 @@ section {
 }
 .pricing__content {
   list-style-type: none;
-  text-align: left;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 .pricing__feature {
-  font-size: 1.4rem;
-  font-size: var(--medium-font-size);
-  margin: 1.3rem 0;
+  font-size: 0.875rem;
 }
 .pricing__icon {
   margin-right: 5px;
@@ -362,32 +367,36 @@ section {
   flex-direction: column;
 }
 
+.contact {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 2rem;
+}
 .contact .container {
   align-items: flex-start;
-}
-.contact-info {
-  width: 50%;
 }
 .contact__header {
   font-size: 2.5rem;
   text-align: left;
+  font-family: "Raleway", sans-serif;
 }
 .contact__message {
-  font-size: var(--medium-font-size);
-  margin: 20px 0 30px;
+  margin: 5px 0 30px;
   font-size: 1rem;
 }
 .contact__data {
   list-style: none;
-  display: flex;
 }
 .contact__data-item {
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  color: var(--unactive-color);
-  font-size: var(--medium-font-size);
-  line-height: 27px;
+  width: 100%;
+  margin: 20px 0;
+  color: #a5a5a5;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.contact__icon {
+  margin-right: 10px;
 }
 .contact__checkbox {
   display: block;
@@ -397,60 +406,86 @@ section {
   cursor: pointer;
   font-size: 1.375rem;
 }
-.contact__icon {
-  margin-right: 5px;
-}
 .contact__form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   text-align: left;
-  width: 40%;
+  width: 100%;
 }
 .contact__form label {
-  color: var(--primary-color);
+  color: #08a6e4;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 3.28px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
   margin: 20px 0;
 }
 .contact__form input {
   border: 0;
-  border-bottom: 2px solid var(--unactive-color);
+  border-bottom: 2px solid #a5a5a5;
   width: 100%;
   outline: none;
 }
 .contact__form input:focus {
-  border-color: var(--primary-color);
+  border-color: #08a6e4;
 }
-.contact .contact__agreement {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
+.contact__form input[type=checkbox] {
+  display: none;
 }
-.contact .contact__checkbox {
-  margin-right: 10px;
-}
-.contact .contact__agreement-text {
-  font-size: 1.2rem;
-  color: var(--unactive-color);
-}
-.contact .contact__btn {
-  color: var(--color-white);
-  padding: 15px 80px;
-  background-color: var(--primary-color);
-  font-weight: 600;
-  border: 0;
-  outline: none;
-  border-radius: 40px;
-  align-self: flex-end;
-  margin-top: 20px;
-  transition: 0.4s;
+.contact__form input[type=checkbox] + label:before {
+  content: " ";
+  background-position: center;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  border: 1px solid #95989a;
+  border-radius: 4px;
+  padding: 6px 12px;
   cursor: pointer;
 }
-.contact .contact__btn:hover {
-  opacity: 0.7;
+.contact__form input[type=checkbox]:checked + label:before {
+  background-image: url(../../assets/Checkmark.svg);
+  background-position: center;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+.contact__agreement {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact__agreement-text {
+  font-size: 0.75rem;
+  color: #a5a5a5;
+  margin-left: 15px;
+}
+.contact .button--primary {
+  align-self: flex-end;
+}
+
+.footer {
+  margin-top: 40px;
+  width: 100%;
+  height: 89px;
+  box-shadow: 0px -5px 40px #00000029;
+  background-color: #f7f7f7;
+  padding: 60px 0;
+}
+.footer__logo a {
+  font-size: 1.625rem;
+}
+.footer__cophyright {
+  margin-top: 10px;
+  color: #a5a5a5;
+  font-size: 0.7rem;
+}
+.footer__cophyright-item {
+  margin-right: 30px;
+}
+.footer .container {
+  flex-direction: row;
+  justify-content: space-around;
 }
 /*# sourceMappingURL=main.css.map */
