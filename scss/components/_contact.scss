@@ -1,21 +1,36 @@
 .contact {
   font-family: $secondary-font;
   padding: 0 2rem;
+  @include mq(desktop) {
+    padding: 4rem 0;
+  }
   .container {
     align-items: flex-start;
+    @include mq(desktop) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
-
   &__header {
     font-size: 2.5rem;
     text-align: left;
     font-family: $primary-font;
+    @include mq(desktop) {
+      font-size: 3rem;
+    }
   }
   &__message {
     margin: 5px 0 30px;
     font-size: 1rem;
+    @include mq(desktop) {
+      margin: 25px 0 30px;
+    }
   }
   &__data {
     list-style: none;
+    @include mq(desktop) {
+      display: flex;
+    }
   }
   &__data-item {
     display: flex;
@@ -25,6 +40,9 @@
     color: $unactive-color;
     font-size: 1rem;
     line-height: 1rem;
+    @include mq(desktop) {
+      margin: 20px 10px;
+    }
   }
   &__icon {
     margin-right: 10px;
@@ -45,6 +63,9 @@
     align-items: flex-start;
     text-align: left;
     width: 100%;
+    @include mq(desktop) {
+      width: 40%;
+    }
     label {
       color: $primary-color;
       text-transform: uppercase;

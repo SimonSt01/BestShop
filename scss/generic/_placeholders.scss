@@ -12,10 +12,30 @@
   border: 1px solid #e8e9ed;
   border-radius: 5px;
   width: 100%;
+  max-width: 1152px;
   background-color: $page-color;
   margin: 30px 0;
-  display: flex;
   justify-content: space-around;
+  @include mq(desktop) {
+    flex-direction: row;
+    height: 370px;
+    justify-content: space-around;
+    padding: 0 50px;
+  }
+  &:nth-child(2n) {
+    @include mq(desktop) {
+      flex-direction: row-reverse;
+    }
+  }
+  .benefits__underline {
+    display: none;
+    @include mq(desktop) {
+      width: 70%;
+      height: 4px;
+      display: block;
+      border-radius: 5px;
+    }
+  }
 }
 %price-card {
   border-radius: 10px;
@@ -29,6 +49,13 @@
   font-family: $secondary-font;
   font-weight: 400;
   position: relative;
+  @include mq(desktop) {
+    height: 460px;
+    margin: 35px 17px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 18px;
+  }
 
   button {
     position: absolute;

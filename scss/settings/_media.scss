@@ -1,0 +1,16 @@
+@use "sass:map";
+$breakpoints: (
+  tablet: "min-width: 720px",
+  desktop: "min-width: 1024px",
+);
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+  @if ($size) {
+    @media ( #{$size} ) {
+      @content;
+    }
+  } @else {
+    @error '"#{$breakpoint}" - Invalid size';
+  }
+}

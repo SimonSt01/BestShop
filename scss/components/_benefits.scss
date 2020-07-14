@@ -11,22 +11,37 @@
     background-color: $page-color;
     width: 100%;
     padding: 15px;
+    @include mq(desktop) {
+      width: 50%;
+      padding: 0 35px;
+    }
   }
   &__header {
     text-align: left;
     margin: 10px 0 30px;
+    max-width: 400px;
+    width: 100%;
     font-size: 1.875rem;
+    font-family: $primary-font;
+    @include mq(desktop) {
+      font-size: 2rem;
+    }
   }
   &__photo {
     max-width: 200px;
     position: relative;
+    @include mq(desktop) {
+      max-width: 400px;
+    }
   }
   &__message {
     font-size: 0.875rem;
+    @include mq(desktop) {
+      font-size: 1rem;
+      margin: 20px 0 40px;
+    }
   }
-  &____underline {
-    display: none;
-  }
+
   &__graphic {
     width: 100%;
     max-width: 200px;
@@ -41,9 +56,15 @@
   .benefits__decoration {
     @include setDecoration(50%, 160px, $primary-color, 40%, 70%);
     transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    @include mq(desktop) {
+      @include setDecoration(50%, 300px, $primary-color, 30%, 80%);
+    }
   }
   .benefits__photo {
     @include setPhoto(60%, 60%);
+  }
+  .benefits__underline {
+    background-color: $primary-color;
   }
 }
 .benefits__item--secondary {
@@ -52,9 +73,21 @@
   .benefits__decoration {
     @include setDecoration($primary-radius, 100px, $secondary-color, 77%, 50%);
     transform: translate(-50%, -70%) matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    @include mq(desktop) {
+      @include setDecoration(
+        $primary-radius,
+        160px,
+        $secondary-color,
+        103%,
+        38%
+      );
+    }
   }
   .benefits__photo {
     @include setPhoto(45%, 60%);
+  }
+  .benefits__underline {
+    background-color: $secondary-color;
   }
 }
 .benefits__item--tertiary {
@@ -62,12 +95,37 @@
   flex-direction: column;
   padding: 0;
   overflow: hidden;
+  background-color: transparent;
+  border: 0;
+  @include mq(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .benefits__graphic {
     background-color: $tertiary-color;
     max-width: 100%;
     width: 100%;
+    border: 1px solid #e8e9ed;
+    @include mq(desktop) {
+      width: 40%;
+      height: 100%;
+    }
   }
   .benefits__photo {
     @include setPhoto(45%, 70%);
+    @include mq(desktop) {
+      @include setPhoto(45%, 60%);
+    }
+  }
+  .benefits__info {
+    border: 1px solid #e8e9ed;
+    height: 100%;
+    width: 100%;
+    @include mq(desktop) {
+      width: 55%;
+    }
+  }
+  .benefits__underline {
+    background-color: $tertiary-color;
   }
 }

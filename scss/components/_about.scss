@@ -1,6 +1,10 @@
 .about {
   .container {
     margin-top: 2rem;
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
   &__feature {
     width: 100%;
