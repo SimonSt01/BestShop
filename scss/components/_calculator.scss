@@ -1,0 +1,136 @@
+.calc {
+  font-family: $secondary-font;
+  background-color: $page-secondary-color;
+  &__header {
+    margin-bottom: 50px;
+  }
+  &__container {
+    justify-content: space-between;
+    padding: 0 15px;
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include mq(tablet) {
+      width: 40%;
+    }
+  }
+  &__input {
+    @extend %calcInput;
+    font-weight: 300;
+    &::placeholder {
+      color: $unactive-color;
+    }
+  }
+
+  &__options {
+    @extend %calcInput;
+    color: $unactive-color;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    &::after {
+      content: "\f358";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: $primary-color;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $hover-transition;
+    }
+    &.active::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__select {
+    list-style: none;
+    box-shadow: 0px 3px 6px #eb476e29;
+    border-radius: 8px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    color: $contrast-color;
+
+    &.active {
+      display: block;
+      border: 1px solid #eb476e;
+      transform: translateY(120%);
+      display: block;
+    }
+  }
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+    transition: $hover-transition;
+    background-color: $page-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin: 10px 0;
+    cursor: pointer;
+    input {
+      margin: 0 10px;
+    }
+    &__text {
+      color: #707070;
+      font-size: 1rem;
+    }
+  }
+  &__summary {
+    list-style-type: none;
+    width: 100%;
+    margin-top: 30px;
+    @include mq(tablet) {
+      width: 40%;
+      margin-top: 0px;
+    }
+  }
+  &__result {
+    min-height: 30px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 6px;
+    background-color: $tertiary-color;
+    margin: 10px 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.875rem;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    transition: 1s;
+    &.opened {
+      display: flex;
+    }
+    &--total {
+      max-width: 200px;
+      margin-left: auto;
+      background-color: $primary-color;
+    }
+    span:last-child {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+}

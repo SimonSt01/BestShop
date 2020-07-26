@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://kit.fontawesome.com/e7103c00fe.js" crossorigin="anonymous"></script>>
     <title>BestShop</title>
   </head>
   <body>
@@ -267,6 +268,57 @@
         </div>
       </div>
     </section>
+
+    <section class="calc">
+      <h2 class="calc__header">Calculate how much you’ll pay</h2>
+      <div class="container calc__container">
+        <form class="calc__form">
+          <input class="calc__input" type="number" id="products"  min="1" step="1" placeholder="Products quantity"/>
+          <input class="calc__input" type="number"  id="orders" min="1" step="1" placeholder="Estimated orders in month"/>
+         
+         <div class="calc__options" id="package">
+        <p>  Choose package </p>  <ul class="calc__select">
+            <li class="calc__item">Basic</li>
+            <li class="calc__item">Professional</li>
+            <li class="calc__item">Premium</li>
+          </div>
+         
+          
+          <label class="calc__checkbox">
+            <input class="calc__check" type="checkbox" id="accounting"/>
+            <span class="checkbox"></span>
+            <p class="calc__checkbox__text">Accounting</p>
+          </label>
+          <label class="calc__checkbox">
+            <input class="calc__check" type="checkbox" id="terminal"/>
+            <span class="checkbox"></span>
+            <p class="calc__checkbox__text">Rental of a payment terminal</p>
+          </label>
+        </form>
+     
+
+      <ul class="calc__summary">
+        <li  id="products" class="  calc__result"> <span>Products</span>
+        <span class = "info">$0</span>
+        <span class ="price"> $0</span> </li>
+        <li  id="orders" class="  calc__result"><span>Orders</span>
+          <span class ="info" >$0</span>
+          <span class ="price">$0</span> </li>
+        <li id="package" class="calc__result"><span>Package</span>
+          <span class ="info" >$0</span>
+          <span class ="price">$0</li>
+        <li  id="accounting" class="  calc__result">
+          <span>Accounting</span>
+          <span class ="price">$0</span> </li>
+        <li  id="terminal" class=" calc__result">
+          <span>Terminal</span>
+          <span class ="price">$0</span> </li>
+        <li  class=" calc__result calc__result--total"><span>Total</span>
+          <span class ="summary">$0</span>
+           </li>
+      </ul> </div>
+  </section>
+
     <section class="contact">
       <div class="container">
         <div class="contact__info">
